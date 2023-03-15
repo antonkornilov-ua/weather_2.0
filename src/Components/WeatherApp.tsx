@@ -5,6 +5,7 @@ import axios from 'axios';
 import { WeatherData } from '../types/WeatherData';
 
 import errorImg from '../assets/404.png';
+import { API_KEY } from '../helpers/api';
 
 
 export const WeatherApp = () => {
@@ -16,7 +17,6 @@ export const WeatherApp = () => {
     const getWeatherData = async () => {
         setIsLoading(true);
         setError(null);
-        const API_KEY = 'ab54429ab157825232cab97e89867df3';
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric&lang=ua`;
 
         try {
