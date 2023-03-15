@@ -20,7 +20,7 @@ const WeatherCard = ({ weatherData }: { weatherData: WeatherData }) => {
                         {Math.round(weatherData.temperature)}&deg;C
                     </div>
                 </div>
-                <div className='text-gray-600 capitalize'>{weatherData.description}</div>
+                <div className='text-gray-600 capitalize text-center mb-2'>{weatherData.description}</div>
                 <div className='text-sm text-gray-600'>Відчувається як: {Math.round(weatherData.feelsLike)}&deg;C</div>
                 <div className='text-sm text-gray-600'>
                     Макс. температура: {Math.round(weatherData.tempMax)}&deg;C
