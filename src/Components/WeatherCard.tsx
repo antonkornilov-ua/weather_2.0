@@ -21,7 +21,6 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData, onImageLoaded }:
 
     const searchTimeZone = getTimeZone(weatherData.timezone);
 
-    console.log(searchTimeZone);
 
     return (
         <div className='max-w-xs rounded overflow-hidden shadow-xl bg-zinc-200 leading-8 mt-2'>

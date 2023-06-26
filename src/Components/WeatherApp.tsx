@@ -17,7 +17,7 @@ export const WeatherApp = () => {
     const [inputPadding, setInputPadding] = useState('w-[21rem]');
 
     const handleImageLoaded = (hasImage: boolean) => {
-        setInputPadding('w-[17rem]');
+        setInputPadding(hasImage ? 'w-[17rem]' : 'w-[13rem]');;
     };
 
 
