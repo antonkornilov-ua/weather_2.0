@@ -68,9 +68,9 @@ const CityImage = ({ city, onImageLoaded }: CityImageProps) => {
                                 className='w-full h-20 rounded-md shadow-md'
                             />
                             <div className='flex justify-evenly mt-1'>
-                                <p className='text-xs'>Photographer: {photo.attribution.photographer}</p>
+                                <p className='text-xs'>Фотограф: {photo.attribution.photographer}</p>
                                 <a className='text-xs hover:text-sky-700' href={photo.attribution.source}>
-                                    source
+                                    Джерело
                                 </a>
                             </div>
                         </div>
