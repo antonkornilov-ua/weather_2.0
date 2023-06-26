@@ -1,12 +1,12 @@
 import { WeatherData } from '../types/WeatherData';
 import { getIconUrl } from '../utils/getIconUrl';
-import { getLocalTime } from '../utils/getLocalTime';
 import { getWindDirection } from '../utils/getWindDirection';
 import { HPA_TO_MM } from './../utils/pressureConverter';
 import { getTimeZone } from './../utils/timezone'
 
 
 import CityImage from './CityImage';
+import LocalTime from './LocalTime';
 
 type WeatherCardProps = {
     weatherData: WeatherData;
@@ -14,15 +14,14 @@ type WeatherCardProps = {
 };
 
 
-const WeatherCard = ({ weatherData, onImageLoaded }: WeatherCardProps) => {
+const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData, onImageLoaded }: WeatherCardProps) => {
     const windDirection = getWindDirection(weatherData.windDeg);
 
     const iconUrl = getIconUrl(weatherData.icon);
 
-    const searchTimeZone = getTimeZone(weatherData.timezone)
+    const searchTimeZone = getTimeZone(weatherData.timezone);
 
     console.log(searchTimeZone);
-    
 
     return (
         <div className='max-w-xs rounded overflow-hidden shadow-xl bg-zinc-200 leading-8 mt-2'>
@@ -38,9 +37,9 @@ const WeatherCard = ({ weatherData, onImageLoaded }: WeatherCardProps) => {
                 </div>
                 <div className='flex justify-between gap-2 items-center mb-2'>
                     <p className='text-gray-600 text-sm'>{searchTimeZone?.name}</p>
-                    <p></p>
-
-
+                    <p>
+                        <LocalTime timezone={searchTimeZone} />
+                    </p>
                 </div>
                 <CityImage onImageLoaded={onImageLoaded} city={weatherData.city} />
 
