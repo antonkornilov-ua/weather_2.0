@@ -6,6 +6,7 @@ module.exports = {
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],
             },
+            animation: ['group-hover', 'hover']
         },
     },
     plugins: [],

@@ -1,0 +1,1 @@
+export const IMAGE_URL = 'https://api.teleport.org/api/urban_areas/';
