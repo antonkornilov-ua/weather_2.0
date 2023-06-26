@@ -8,4 +8,8 @@ export interface WeatherData {
     tempMin: number;
     windSpeed: number;
     windDeg: number;
+    country: string;
+    humidity: number;
+    pressure: number;
+    timezone: number
 }
